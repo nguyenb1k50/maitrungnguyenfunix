@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" media="screen and (min-device-width: 993px)" href="./css/desktop-style.css" />
+	<link rel='stylesheet' media='screen and (min-width: 601px) and (max-width: 992px)' href='css/tablet-style.css' />
+	<link rel='stylesheet' media='screen and (min-width: 100px) and (max-width: 600px)' href='css/mobile-style.css' />
+	<link rel="stylesheet" href="./css/font.css">
+	<title>Assignment 02</title>
+</head>
+<body>
+	<div id="banner" style="padding: 110px">
+		<h1 class="full-name-title">Mai Trung Nguyên</h1>
+		<span class="positon-title">Full Stack Developer</span>
+	</div>
+
+	<section id="nav-bar">
+		<nav class="navbar-default-mobile-tablet d-flex justify-content-center">
+			<a href="#">Thông tin <i class="icon-user"></i></a>
+			<a href="#">Lý lịch <i class="icon-doc-text-inv"></i></a>
+			<a class="full-name">Mai Trung Nguyên<p class="full-name-position">Full stack developer</p></a>
+			<a href="#">Chứng chỉ <i class="icon-mail-alt"></i></a>
+			<a href="#">Dự Án <i class="icon-star-1"></i></a>
+		</nav>
+	</section>
+
+	<section id="about" class="bg-grey">
+		<div class="div-container">
+			<div id="target">
+				<h1 class="section-title">Mục tiêu nghề nghiệp</h1>
+				<p>
+					Là một sinh viên đã hoàn thành chương trình chứng chỉ Doanh
+					Nghiệp của FUNiX. Em mong muốn mình sẽ được làm việc với vị
+					trí <b>Fullstack Developer</b>, có thể vận dụng những kiến
+					thức đã được trau dồi và không ngừng học hỏi để phát triển
+					bản thân, cũng như hoàn thành tốt nhất công việc được giao.
+				</p>
+			</div>
+			<div class="personal-info" id="email-validate">
+				<h1 class="section-title">Thông tin cá nhân</h1>
+					<input id="emailInput" type="text" class="form-control">
+					<p>Hãy nhập email để xác thực</p>
+					<p id="warning" style="color: red;"></p>
+
+				<button type="button" class="btn btn-primary" onclick="validateEmail()">Submit</button>
+			</div>
+			<div id="personal-info" class="hide">
+				<h1 class="section-title">Thông tin cá nhân</h1>
+				<ul class="mt-40 info">
+					<li><span>Giới tính</span> : Nam</li>
+					<li><span>Ngày sinh</span> : 24/10/1987</li>
+					<li><span>Điện thoại</span> : (+84) 835646765</li>
+					<li><span>Email</span> : nguyenmtxm01952@funix.edu.vn</li>
+					<li><span>Địa chỉ</span> : Số 10, đường 10, TP Thủ Đức</li>
+					<li><span>Website</span> : https://abc.tech</li>
+				</ul>
+				<div class="section-network">
+					<ul>
+						<li><i class="icon-twitter"></i></li>
+						<li><i class="icon-facebook"></i></li>
+						<li><i class="icon-gplus"></i></li>
+						<li><i class="icon-linkedin"></i></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section id="job-info">
+		<div class="div-container">
+			<div class="experience-hobbies">
+				<div class="experience container-collapse" style="margin-bottom: 20px;">
+					<h1>Kinh nghiệm <i class="ic-toolbox"></i></h1>
+					<div id="view-more" class="view-more"><button class="btn" type="button" onclick="viewMoreExperience()"><div class="arrow-down"></div>View more</button></div>
+					<div id="view-less" class="view-less"><button class="btn" type="button" onclick="viewLessExperience()"><div class="arrow-up"></div>View less</button></div>
+					<ul class="style-list-custom hide" id="style-list-custom">
+						<li>
+							<p><strong>Full stack Developer - Công ty Y</strong></p>
+							<p>- Xây dựng, phát triển Website dựa trên thiết kế và yêu cầu đã có</p>
+							<p>- Phân tích và thiết kế Database, sử dụng các hệ quản trị CSDL (MySQL, SQLServer, NoSQL,...) và viết được các câu truy vấn.</p>
+							<p>- Sử dụng ngôn ngữ server-side (Python, Java,...) để xây dựng các Web Service</p>
+						</li>
+						<li>
+							<p><strong>Web Designer - Công ty X</strong></p>
+							<p>- Thiết kế Website dựa trên yêu cầu của khách hàng</p>
+							<p>- Sử dụng các công cụ: Figma, Canva, PTS</p>
+						</li>
+					</ul>
+				</div>
+				<div class="hobbies container-collapse" style="margin-bottom: 20px;">
+					<h1>Sở thích <i class="ic-telescope"></i></h1>
+					<div id="view-more-hobbies" class="view-more"><button class="btn" type="button" onclick="viewMoreHobies()"><div class="arrow-down"></div>View more</button></div>
+					<div id="view-less-hobbies" class="view-less"><button class="btn" type="button" onclick="viewLessHobies()"><div class="arrow-up"></div>View less</button></div>
+					<ul class="hobbies-list hide" id="hobbies-id">
+						<li><i class="ic-megaphone"></i><p>Âm nhạc</p></li>
+						<li><i class="ic-strategy"></i><p>Chơi game</p></li>
+						<li><i class="ic-hotairballoon"></i><p>Du lịch</p></li>
+						<li><i class="ic-basket"></i><p>Nấu ăn</p></li>
+					</ul>
+				</div>
+			</div>
+			<div class="education-languages">
+				<div class="education container-collapse" style="margin-bottom: 20px;">
+					<h1>Học vấn <i class="ic-pencil"></i></h1>
+					<div id="view-more-edu" class="view-more"><button class="btn" type="button" onclick="viewMoreEdu()"><div class="arrow-down"></div>View more</button></div>
+					<div id="view-less-edu" class="view-less"><button class="btn" type="button" onclick="viewLessEdu()"><div class="arrow-up"></div>View less</button></div>
+					<ul class="style-list-custom hide" id="edu-id">
+						<li>
+							<p><strong>FUNiX</strong></p>
+							<p>06/2021 - 05/2022</p>
+							<p>- Tốt nghiệp chứng chỉ doanh nghiệp nhánh Fullstack</p>
+							<p>-GCP: 9/10</p>
+						</li>
+						<li>
+							<p><strong>Cử nhân - ĐH FPT</strong></p>
+							<p>08/2016 - 07/2019</p>
+							<p>- Chuyên ngành: Kỹ thuật phần mềm</p>
+							<p>- GCP: 3.2/4</p>
+						</li>
+					</ul>
+				</div>
+				<div class="languages container-collapse" style="margin-bottom: 20px;">
+					<h1>Ngôn ngữ<i class="ic-mic"></i></h1>
+					<div id="view-more-language" class="view-more"><button class="btn" type="button" onclick="viewMoreLang()"><div class="arrow-down"></div>View more</button></div>
+					<div id="view-less-language" class="view-less"><button class="btn" type="button" onclick="viewLessLang()"><div class="arrow-up"></div>View less</button></div>
+					<ul class="hide" id="language-id">
+						<li>Tiếng Anh - IELTS 7.0</li>
+						<li><div class="container-border"><div class="border-dashed"></div><div class="border-dashed"></div><div class="border-dashed white-color"></div></div></li>
+						<li>Tiếng Nhật - JLPT N4</li>
+						<li><li><div class="container-border"><div class="border-dashed"></div><div class="border-dashed white-color"></div><div class="border-dashed white-color"></div></div></li></li>
+					</ul>
+				</div>
+			</div>
+			<div class="activity-skills">
+				<div class="activity container-collapse" style="margin-bottom: 20px;">
+					<h1>Hoạt động <i class="ic-toolbox"></i></h1>
+					<div id="view-more-activity" class="view-more"><button class="btn" type="button" onclick="viewMoreActivity()"><div class="arrow-down"></div>View more</button></div>
+					<div id="view-less-activity" class="view-less"><button class="btn" type="button" onclick="viewLessActivity()"><div class="arrow-up"></div>View less</button></div>
+					<ul class="style-list-custom hide" id="activity-id">
+						<li><p><strong>FPT Edu Hackathon 2019</strong></p></li>
+						<p>- Giải 3 bảng A</p>
+						<p>- Đề tài: Trang web về phân loại rác thải.</p>
+						<li>Câu lạc bộ Z</li>
+						<p>08/2016 - 08/2017</p>
+						<p>- Trưởng ban chuyên môn</p>
+					</ul>
+				</div>
+				<div class="skills container-collapse" style="margin-bottom: 20px;">
+					<h1>Kỹ năng <i class="ic-tools-2"></i></h1>
+					<div id="view-more-skill" class="view-more"><button class="btn" type="button" onclick="viewMoreSkill()"><div class="arrow-down"></div>View more</button></div>
+					<div id="view-less-skill" class="view-less"><button class="btn" type="button" onclick="viewLessSkill()"><div class="arrow-up"></div>View less</button></div>
+					<ul class="hide" id="skill-id">
+						<li>HTML/CSS: Fundamental</li>
+						<li><div class="container-border"><div class="border-dashed"></div><div class="border-dashed white-color"></div><div class="border-dashed white-color"></div></div></li>
+						<li>Javascript: Intermediate</li>
+						<li><div class="container-border"><div class="border-dashed"></div><div class="border-dashed"></div><div class="border-dashed white-color"></div></div></li>
+						<li>NodeJS: Intermediate</li>
+						<li><div class="container-border"><div class="border-dashed"></div><div class="border-dashed"></div><div class="border-dashed white-color"></div></div></li>
+						<li>Bootstrap 5: Fundamental</li>
+						<li><div class="container-border"><div class="border-dashed"></div><div class="border-dashed white-color"></div><div class="border-dashed white-color"></div></div></li>
+					</ul>
+				</div>
+			</div>
+			<div class="experience-skills-languages">
+				<div class="experience container-collapse" style="margin-bottom: 20px;">
+					<h1>Kinh nghiệm <i class="ic-toolbox"></i></h1>
+					<div id="view-more-ex-mobile" class="view-more"><button class="btn" type="button" onclick="viewMoreExperienceMobile()"><div class="arrow-down"></div>View more</button></div>
+					<div id="view-less-ex-mobile" class="view-less"><button class="btn" type="button" onclick="viewLessExperienceMobile()"><div class="arrow-up"></div>View less</button></div>
+					<ul class="style-list-custom hide" id="experience-mobile-id">
+						<li>
+							<p><strong>Full stack Developer - Công ty Y</strong></p>
+							<p>- Xây dựng, phát triển Website dựa trên thiết kế và yêu cầu đã có</p>
+							<p>- Phân tích và thiết kế Database, sử dụng các hệ quản trị CSDL (MySQL, SQLServer, NoSQL,...) và viết được các câu truy vấn.</p>
+							<p>- Sử dụng ngôn ngữ server-side (Python, Java,...) để xây dựng các Web Service</p>
+						</li>
+						<li>
+							<p><strong>Web Designer - Công ty X</strong></p>
+							<p>- Thiết kế Website dựa trên yêu cầu của khách hàng</p>
+							<p>- Sử dụng các công cụ: Figma, Canva, PTS</p>
+						</li>
+					</ul>
+				</div>
+				<div class="skills container-collapse" style="margin-bottom: 20px;">
+					<h1>Kỹ năng <i class="ic-tools-2"></i></h1>
+					<div id="view-more-skill-mobile" class="view-more"><button class="btn" type="button" onclick="viewMoreSkillMobile()"><div class="arrow-down"></div>View more</button></div>
+					<div id="view-less-skill-mobile" class="view-less"><button class="btn" type="button" onclick="viewLessSkillMobile()"><div class="arrow-up"></div>View less</button></div>
+					<ul class="hide" id="skill-mobile-id">
+						<li>HTML/CSS: Fundamental</li>
+						<li><div class="container-border"><div class="border-dashed"></div><div class="border-dashed white-color"></div><div class="border-dashed white-color"></div></div></li>
+						<li>Javascript: Intermediate</li>
+						<li><div class="container-border"><div class="border-dashed"></div><div class="border-dashed"></div><div class="border-dashed white-color"></div></div></li>
+						<li>NodeJS: Intermediate</li>
+						<li><div class="container-border"><div class="border-dashed"></div><div class="border-dashed"></div><div class="border-dashed white-color"></div></div></li>
+						<li>Bootstrap 5: Fundamental</li>
+						<li><div class="container-border"><div class="border-dashed"></div><div class="border-dashed white-color"></div><div class="border-dashed white-color"></div></div></li>
+					</ul>
+				</div>
+				<div class="languages container-collapse" style="margin-bottom: 20px;">
+					<h1>Ngôn ngữ <i class="ic-mic"></i>	</h1>
+					<div id="view-more-lang-mobile" class="view-more"><button class="btn" type="button" onclick="viewMoreLangMobile()"><div class="arrow-down"></div>View more</button></div>
+					<div id="view-less-lang-mobile" class="view-less"><button class="btn" type="button" onclick="viewLessLangMobile()"><div class="arrow-up"></div>View less</button></div>
+					<ul class="hide" id="lang-mobile-id">
+						<li>Tiếng Anh - IELTS 7.0</li>
+						<li><div class="container-border"><div class="border-dashed"></div><div class="border-dashed"></div><div class="border-dashed white-color"></div></div></li>
+						<li>Tiếng Nhật - JLPT N4</li>
+						<li><li><div class="container-border"><div class="border-dashed"></div><div class="border-dashed white-color"></div><div class="border-dashed white-color"></div></div></li></li>
+					</ul>
+				</div>
+			</div>
+			<div class="activity-education-hobbies">
+				<div class="activity container-collapse" style="margin-bottom: 20px;">
+					<h1>Hoạt động <i class="ic-toolbox"></i></h1>
+					<div id="view-more-activity-mobile" class="view-more"><button class="btn" type="button" onclick="viewMoreActivityMobile()"><div class="arrow-down"></div>View more</button></div>
+					<div id="view-less-activity-mobile" class="view-less"><button class="btn" type="button" onclick="viewLessActivityMobile()"><div class="arrow-up"></div>View less</button></div>
+					<ul class="style-list-custom hide" id="activity-mobile-id">
+						<li><p><strong>FPT Edu Hackathon 2019</strong></p></li>
+						<p>- Giải 3 bảng A</p>
+						<p>- Đề tài: Trang web về phân loại rác thải.</p>
+						<li>Câu lạc bộ Z</li>
+						<p>08/2016 - 08/2017</p>
+						<p>- Trưởng ban chuyên môn</p>
+					</ul>
+				</div>
+				<div class="education container-collapse" style="margin-bottom: 20px;">
+					<h1>Học vấn <i class="ic-pencil"></i></h1>
+					<div id="view-more-edu-mobile" class="view-more"><button class="btn" type="button" onclick="viewMoreEduMobile()"><div class="arrow-down"></div>View more</button></div>
+					<div id="view-less-edu-mobile" class="view-less"><button class="btn" type="button" onclick="viewLessEduMobile()"><div class="arrow-up"></div>View less</button></div>
+					<ul class="style-list-custom hide" id="edu-mobile-id">
+						<li>
+							<p><strong>FUNiX</strong></p>
+							<p>06/2021 - 05/2022</p>
+							<p>- Tốt nghiệp chứng chỉ doanh nghiệp nhánh Fullstack</p>
+							<p>-GCP: 9/10</p>
+						</li>
+						<li>
+							<p><strong>Cử nhân - ĐH FPT</strong></p>
+							<p>08/2016 - 07/2019</p>
+							<p>- Chuyên ngành: Kỹ thuật phần mềm</p>
+							<p>- GCP: 3.2/4</p>
+						</li>
+					</ul>
+				</div>
+				<div class="hobbies container-collapse" style="margin-bottom: 20px;">
+					<h1>Sở thích <i class="ic-telescope"></i></h1>
+					<div id="view-more-hobbies-mobile" class="view-more"><button class="btn" type="button" onclick="viewMoreHobiesMobile()"><div class="arrow-down"></div>View more</button></div>
+					<div id="view-less-hobbies-mobile" class="view-less"><button class="btn" type="button" onclick="viewLessHobiesMobile()"><div class="arrow-up"></div>View less</button></div>
+					<ul class="hobbies-list hide" id="hobbies-mobile-id">
+						<li><i class="ic-megaphone"></i><p>Âm nhạc</p></li>
+						<li><i class="ic-strategy"></i><p>Chơi game</p></li>
+						<li><i class="ic-hotairballoon"></i><p>Du lịch</p></li>
+						<li><i class="ic-basket"></i><p>Nấu ăn</p></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<!-- CHỨNG CHỈ - GIẢI THƯỞNG -->
+	<section id="certificate" class="bg-grey">
+		<div class="div-container">
+			<h1 class="section-title">
+				Chứng chỉ - Giải thưởng
+			</h1>
+			<div class="container-grid border-grid-row">
+				<div class="container-grid-cert border-grid-row-mobile">
+					<div class="flex-item-cert"><img src="./images/Cert_WEB.png" alt="" width="100%"></div>
+					<div class="flex-item-cert">
+						<p class="title-cert">Chứng chỉ lập trình web - Funix</p>
+						<p>- Chứng chỉ thuộc chương trình CCDN</p>
+						<p>- GCP: 8.6</p>
+					</div>
+				</div>
+				<div class="container-grid-cert border-grid-row-mobile">
+					<div class="flex-item-cert"><img src="./images/Cert_WEB.png" alt="" width="100%"></div>
+					<div class="flex-item-cert">
+						<p class="title-cert">Chứng chỉ lập trình Javascript - Funix</p>
+						<p>- Chứng chỉ thuộc chương trình CCDN</p>
+						<p>- GCP: 8.9</p>
+					</div>
+				</div>
+			</div>
+			<div class="container-grid">
+				<div class="container-grid-cert">
+					<div class="flex-item-cert"><img src="./images/Cert_WEB.png" alt="" width="100%"></div>
+					<div class="flex-item-cert">
+						<p class="title-cert">Chứng chỉ thiết kế DATABASE - Funix</p>
+						<p>- Chứng chỉ thuộc chương trình CCDN</p>
+						<p>- GCP: 8.0</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="project">
+		<div class="div-container">
+			<h1 class="section-title">
+				Dự án
+			</h1>
+			<div class="project-flex-container">
+				<div class="project-flex-item">
+					<img src="./images/project_1.png" width="100%">
+					<p class="project-title">CV Cá nhân</p>
+					<div class="project-grid-container">
+						<div class="project-grid-item"><p class="year-blue">2021</p></div>
+						<div class="project-grid-item"><i class="icon-user-1"></i><span>FUNiX</span><i class="icon-lamp"></i><span>Developer</span></div>
+							<div class="project-grid-item">Mô tả</div>
+							<div class="project-grid-item">Trang Web CV cá nhân online. Gồm các thông tin cá nhân cũng như kĩ nặng nghề nghiệp</div>
+							<div class="project-grid-item">Nhiệm vụ</div>
+							<div class="project-grid-item">- Phát triển code - Review code - Tối ưu code - Xử lý lỗi</div>
+							<div class="project-grid-item no-border">Công nghệ</div>
+							<div class="project-grid-item no-border">- HTML, CSS</div>
+					</div>
+				</div>
+				<div class="project-flex-item">
+					<img src="./images/project_2.png" width="100%">
+					<p class="project-title">Trang web quản lý thú cưng</p>
+					<div class="project-grid-container">
+						<div class="project-grid-item"><p class="year-blue">2021</p></div>
+						<div class="project-grid-item"><i class="icon-user-1"></i><span>FUNiX</span><i class="icon-lamp"></i><span>Developer</span></div>
+							<div class="project-grid-item">Mô tả</div>
+							<div class="project-grid-item">Ứng dụng giúp quản lý các thông tin của thú cưng như: Cân nặng, giống, tình trạng tiêm chủng,...Bao gồm các chức năng thêm / sửa / xóa.</div>
+							<div class="project-grid-item">Nhiệm vụ</div>
+							<div class="project-grid-item">- Phát triển code - Review code - Tối ưu code - Xử lý lỗi</div>
+							<div class="project-grid-item no-border">Công nghệ</div>
+							<div class="project-grid-item no-border">- HTML, CSS, Javascript</div>
+					</div>
+				</div>
+				<div class="project-flex-item">
+					<img src="./images/project_3.png" width="100%">
+					<p class="project-title">Trang web xem tin tức</p>
+					<div class="project-grid-container">
+						<div class="project-grid-item"><p class="year-blue">2021</p></div>
+						<div class="project-grid-item"><i class="icon-user-1"></i><span>FUNiX</span><i class="icon-lamp"></i><span>Developer</span></div>
+							<div class="project-grid-item">Mô tả</div>
+							<div class="project-grid-item">Trang Web xem tin tức từ nhiều nguồn khác nhau, người dùng có thể tìm kiếm các tin tức dựa theo các từ khóa.</div>
+							<div class="project-grid-item">Nhiệm vụ</div>
+							<div class="project-grid-item">- Phát triển code - Review code - Tối ưu code - Xử lý lỗi</div>
+							<div class="project-grid-item no-border">Công nghệ</div>
+							<div class="project-grid-item no-border">- HTML, CSS, Javascript</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="footer" class="bg-grey">
+		<div class="container d-flex justify-content-center align-items-center" style="height: 124px;">
+			<ul>
+				<li><i class="icon-facebook"></i>Facebook</li>
+				<li><i class="icon-linkedin"></i>Linkedin</li>
+				<li><i class="icon-github-circled"></i>Github</li>
+			</ul>
+		</div>
+	</section>
+	<script>
+		function validateEmail() {
+  var email;
+
+  email = document.getElementById("emailInput").value;
+
+	const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+      if (regex.test(emailInput.value) == false) 
+      {
+      document.getElementById("warning").style.color = "red";
+          document.getElementById("warning").innerHTML ="Email không hợp lệ";
+          return false;
+      } else{
+			document.getElementById("email-validate").classList.add("hide");
+			document.getElementById("personal-info").classList.remove("hide");
+
+      }
+
+ return true;
+}
+
+function viewMoreExperience() {
+	document.getElementById("style-list-custom").classList.remove("hide");
+	document.getElementById("view-more").classList.add("hide");
+	document.getElementById("view-more").classList.remove("view-more");
+	document.getElementById("view-less").classList.remove("view-less");
+}
+
+function viewLessExperience() {
+	document.getElementById("style-list-custom").classList.add("hide");
+	document.getElementById("view-more").classList.remove("hide");
+	document.getElementById("view-more").classList.add("view-more");
+	document.getElementById("view-less").classList.add("view-less");
+}
+
+function viewMoreExperienceMobile() {
+	document.getElementById("experience-mobile-id").classList.remove("hide");
+	document.getElementById("view-more-ex-mobile").classList.add("hide");
+	document.getElementById("view-more-ex-mobile").classList.remove("view-more");
+	document.getElementById("view-less-ex-mobile").classList.remove("view-less");
+}
+
+function viewLessExperienceMobile() {
+	document.getElementById("experience-mobile-id").classList.add("hide");
+	document.getElementById("view-more-ex-mobile").classList.remove("hide");
+	document.getElementById("view-more-ex-mobile").classList.add("view-more");
+	document.getElementById("view-less-ex-mobile").classList.add("view-less");
+}
+
+function viewMoreHobies() {
+	document.getElementById("hobbies-id").classList.remove("hide");
+	document.getElementById("view-more-hobbies").classList.add("hide");
+	document.getElementById("view-more-hobbies").classList.remove("view-more");
+	document.getElementById("view-less-hobbies").classList.remove("view-less");
+}
+
+function viewLessHobies() {
+	document.getElementById("hobbies-id").classList.add("hide");
+	document.getElementById("view-more-hobbies").classList.remove("hide");
+	document.getElementById("view-more-hobbies").classList.add("view-more");
+	document.getElementById("view-less-hobbies").classList.add("view-less");
+}
+
+function viewMoreHobiesMobile() {
+	document.getElementById("hobbies-mobile-id").classList.remove("hide");
+	document.getElementById("view-more-hobbies-mobile").classList.add("hide");
+	document.getElementById("view-more-hobbies-mobile").classList.remove("view-more");
+	document.getElementById("view-less-hobbies-mobile").classList.remove("view-less");
+}
+
+function viewLessHobiesMobile() {
+	document.getElementById("hobbies-mobile-id").classList.add("hide");
+	document.getElementById("view-more-hobbies-mobile").classList.remove("hide");
+	document.getElementById("view-more-hobbies-mobile").classList.add("view-more");
+	document.getElementById("view-less-hobbies-mobile").classList.add("view-less");
+}
+
+function viewMoreEdu() {
+	document.getElementById("edu-id").classList.remove("hide");
+	document.getElementById("view-more-edu").classList.add("hide");
+	document.getElementById("view-more-edu").classList.remove("view-more");
+	document.getElementById("view-less-edu").classList.remove("view-less");
+}
+
+function viewLessEdu() {
+	document.getElementById("edu-id").classList.add("hide");
+	document.getElementById("view-more-edu").classList.remove("hide");
+	document.getElementById("view-more-edu").classList.add("view-more");
+	document.getElementById("view-less-edu").classList.add("view-less");
+}
+
+function viewMoreEduMobile() {
+	document.getElementById("edu-mobile-id").classList.remove("hide");
+	document.getElementById("view-more-edu-mobile").classList.add("hide");
+	document.getElementById("view-more-edu-mobile").classList.remove("view-more");
+	document.getElementById("view-less-edu-mobile").classList.remove("view-less");
+}
+
+function viewLessEduMobile() {
+	document.getElementById("edu-mobile-id").classList.add("hide");
+	document.getElementById("view-more-edu-mobile").classList.remove("hide");
+	document.getElementById("view-more-edu-mobile").classList.add("view-more");
+	document.getElementById("view-less-edu-mobile").classList.add("view-less");
+}
+
+function viewMoreActivity() {
+	document.getElementById("activity-id").classList.remove("hide");
+	document.getElementById("view-more-activity").classList.add("hide");
+	document.getElementById("view-more-activity").classList.remove("view-more");
+	document.getElementById("view-less-activity").classList.remove("view-less");
+}
+
+function viewLessActivity() {
+	document.getElementById("activity-id").classList.add("hide");
+	document.getElementById("view-more-activity").classList.remove("hide");
+	document.getElementById("view-more-activity").classList.add("view-more");
+	document.getElementById("view-less-activity").classList.add("view-less");
+}
+
+function viewMoreActivityMobile() {
+	document.getElementById("activity-mobile-id").classList.remove("hide");
+	document.getElementById("view-more-activity-mobile").classList.add("hide");
+	document.getElementById("view-more-activity-mobile").classList.remove("view-more");
+	document.getElementById("view-less-activity-mobile").classList.remove("view-less");
+}
+
+function viewLessActivityMobile() {
+	document.getElementById("activity-mobile-id").classList.add("hide");
+	document.getElementById("view-more-activity").classList.remove("hide");
+	document.getElementById("view-more-activity").classList.add("view-more");
+	document.getElementById("view-less-activity").classList.add("view-less");
+}
+
+function viewMoreLang() {
+	document.getElementById("language-id").classList.remove("hide");
+	document.getElementById("view-more-language").classList.add("hide");
+	document.getElementById("view-more-language").classList.remove("view-more");
+	document.getElementById("view-less-language").classList.remove("view-less");
+}
+
+function viewLessLang() {
+	document.getElementById("language-id").classList.add("hide");
+	document.getElementById("view-more-language").classList.remove("hide");
+	document.getElementById("view-more-language").classList.add("view-more");
+	document.getElementById("view-less-language").classList.add("view-less");
+}
+
+function viewMoreLangMobile() {
+	document.getElementById("lang-mobile-id").classList.remove("hide");
+	document.getElementById("view-more-lang-mobile").classList.add("hide");
+	document.getElementById("view-more-lang-mobile").classList.remove("view-more");
+	document.getElementById("view-less-lang-mobile").classList.remove("view-less");
+}
+
+function viewLessLangMobile() {
+	document.getElementById("lang-mobile-id").classList.add("hide");
+	document.getElementById("view-more-lang-mobile").classList.remove("hide");
+	document.getElementById("view-more-lang-mobile").classList.add("view-more");
+	document.getElementById("view-less-lang-mobile").classList.add("view-less");
+}
+
+function viewMoreSkill() {
+	document.getElementById("skill-id").classList.remove("hide");
+	document.getElementById("view-more-skill").classList.add("hide");
+	document.getElementById("view-more-skill").classList.remove("view-more");
+	document.getElementById("view-less-skill").classList.remove("view-less");
+}
+
+function viewLessSkill() {
+	document.getElementById("skill-id").classList.add("hide");
+	document.getElementById("view-more-skill").classList.remove("hide");
+	document.getElementById("view-more-skill").classList.add("view-more");
+	document.getElementById("view-less-skill").classList.add("view-less");
+}
+
+function viewMoreSkillMobile() {
+	document.getElementById("skill-mobile-id").classList.remove("hide");
+	document.getElementById("view-more-skill-mobile").classList.add("hide");
+	document.getElementById("view-more-skill-mobile").classList.remove("view-more");
+	document.getElementById("view-less-skill-mobile").classList.remove("view-less");
+}
+
+function viewLessSkillMobile() {
+	document.getElementById("skill-mobile-id").classList.add("hide");
+	document.getElementById("view-more-skill-mobile").classList.remove("hide");
+	document.getElementById("view-more-skill-mobile").classList.add("view-more");
+	document.getElementById("view-less-skill-mobile").classList.add("view-less");
+}
+	</script>
+</body>
+</html>
