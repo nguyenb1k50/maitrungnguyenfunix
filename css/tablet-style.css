@@ -1,0 +1,67 @@
+.navbar-default-mobile-tablet {
+  max-width: 700px!important;
+  margin: auto;
+}
+
+section > .div-container{
+  max-width: 768px;
+}
+
+#nav-bar a:nth-child(3) {
+  display: block;
+  border-left: 1px solid #a9a9a970!important;
+  visibility: hidden;
+}
+
+.full-name-position {
+  visibility: hidden!important;
+}
+
+#nav-bar a:nth-child(2) {
+  border-right: 1px solid #a9a9a970!important;
+}
+
+#nav-bar a {
+  width: 400px!important;
+  font-size: 14px!important;
+  padding-left: 5px;
+  padding-right: 10px!important;
+}
+
+div#target {
+  padding-left: 50px!important;
+}
+
+
+/* 6 Blocks Tablet */
+#job-info .div-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr!important;
+  gap: 10px!important;
+  
+}
+
+.experience-hobbies,.education-languages,.activity-skills {
+  display: none;
+}
+
+.experience-skills-languages, .activity-education-hobbies {
+  display: grid!important;
+}
+
+
+/* CHỨNG CHỈ - GIẢI THƯỞNG TABLET */
+
+.container-grid-cert {
+  flex-wrap: wrap!important;
+}
+
+.flex-item-cert {
+  width: 100%!important;
+}
+
+/* DỰ ÁN TABLE */
+
+.project-title {
+  padding-bottom: 40px!important;
+}

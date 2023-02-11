@@ -1,0 +1,96 @@
+div#target {
+  padding-left: 50px;
+}
+
+/* About mobile */
+
+#about .div-container {
+  grid-template-columns: 1fr!important;
+
+}
+
+/* 6 blocks mobile */
+
+#job-info .div-container {
+  display: grid;
+  grid-template-columns: 1fr!important;
+  gap: 10px!important;
+  
+}
+
+.experience-hobbies,.education-languages,.activity-skills {
+  display: none;
+}
+
+
+.experience-skills-languages, .activity-education-hobbies {
+  display: block;
+}
+
+/* CHỨNG CHỈ - GIẢI THƯỞNG MOBILE */
+
+.container-grid {
+  grid-template-columns: 1fr!important;
+}
+
+.flex-item-cert {
+  width: 70%!important;
+}
+
+.border-grid-row {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.border-grid-row-mobile {
+  border-bottom: 3px solid #e8a3a3;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+}
+
+.container-grid {
+  gap: 0!important;
+}
+
+/* DỰ ÁN */
+
+.project-flex-container {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-flex-item {
+  width: 70%;
+  padding-bottom: 40px;
+}
+
+.project-flex-container {
+  width: 500px!important;
+}
+
+/* NAVBAR custom mobile */
+.navbar-default-mobile-tablet {
+  flex-direction: column!important;
+}
+
+#nav-bar a:nth-child(3) {
+  display: none!important;
+}
+
+#nav-bar a {
+  padding-left: 25px!important;
+  font-size: 22px!important;
+}
+
+#nav-bar a:nth-child(2) {
+  border-right: none!important;
+}
+
+/* FOOTER mobile */
+.div-container {
+  max-width: 400px!important;
+}
+#footer ul li {
+  line-height: 2.5;
+}
